@@ -45,7 +45,6 @@ Upload your DSA sheet, clean and analyze it using Python, and track your coding 
 
 
 ---
-🙌 Author
 Made with ❤️ by Sajid Khan
 If you found this useful, give the repo a ⭐ and share it!
 
