@@ -6,7 +6,11 @@ const app = express();
 require("dotenv").config();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: "https://dsalysis.vercel.app",  // Update with your Vercel frontend URL
+  credentials: true
+}));
+
 app.use(express.json());
 
 // DB Connect
