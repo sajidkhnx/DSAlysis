@@ -1,6 +1,7 @@
 import React from "react";
 import CalendarHeatmap from "react-calendar-heatmap";
-import "react-calendar-heatmap/dist/styles.css";
+// import "react-calendar-heatmap/dist/styles.css";
+import '../../styles/heatmap.css';
 import { useQuestions } from "../../QuestionsContext";
 import { endOfToday, subDays, format, getMonth, getYear } from "date-fns";
 
