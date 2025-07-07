@@ -7,7 +7,10 @@ require("dotenv").config();
 
 // Middleware
 app.use(cors({
-  origin: "https://dsalysis.vercel.app",  // Update with your Vercel frontend URL
+  origin: [
+    "https://dsalysis.vercel.app",
+    "https://ds-alysis-qgs4.vercel.app"
+  ],
   credentials: true
 }));
 
