@@ -11,7 +11,7 @@ export function QuestionsProvider({ children }) {
     setLoading(true);
     try {
       const token = localStorage.getItem("dsa_jwt");
-      const res = await axios.get("http://localhost:5000/api/questions", {
+      const res = await axios.get("https://dsalysis.onrender.com/api/questions", {
         headers: {
           Authorization: `Bearer ${token}`
         }

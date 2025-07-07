@@ -9,7 +9,7 @@ function SheetInner() {
   const handleToggleSolved = async (id, current) => {
     try {
       const token = localStorage.getItem("dsa_jwt");
-      await fetch(`http://localhost:5000/api/questions/${id}`, {
+      await fetch(`https://dsalysis.onrender.com/api/questions/${id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

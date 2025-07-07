@@ -23,7 +23,7 @@ export default function Charts() {
 
   useEffect(() => {
     const token = localStorage.getItem("dsa_jwt");
-    axios.get("http://localhost:5000/api/questions", {
+    axios.get("https://dsalysis.onrender.com/api/questions", {
       headers: {
         Authorization: `Bearer ${token}`
       }

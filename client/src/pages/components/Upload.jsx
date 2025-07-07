@@ -13,7 +13,7 @@ function Upload() {
     const formData = new FormData();
     formData.append("file", file);
     const token = localStorage.getItem("dsa_jwt");
-    await axios.post("http://localhost:5000/api/upload", formData, {
+    await axios.post("https://dsalysis.onrender.com/api/upload", formData, {
       headers: {
         Authorization: `Bearer ${token}`
       }

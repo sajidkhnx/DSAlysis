@@ -8,7 +8,7 @@ export default function Homenew() {
   // const [questions, setQuestions] = useState([]);
 
   // useEffect(() => {
-  //   axios.get("http://localhost:5000/api/questions").then((res) => {
+  //   axios.get("https://dsalysis.onrender.com/api/questions").then((res) => {
   //     setQuestions(res.data);
   //     console.log(res.data); 
   //   });
