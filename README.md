@@ -40,6 +40,32 @@ Upload your DSA sheet, clean and analyze it using Python, and track your coding 
 | Uploads     | multer, papaparse, xlsx              |
 
 ---
+
+---
+
+## ⚙️ Getting Started
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/sajidkhnx/DSAlysis.git
+cd DSAlysis
+
+# 2. Clean your sheet (optional)
+cd scripts
+python clean_data.py input.csv output.csv
+
+# 3. Start the backend server
+cd ../server
+npm install
+npm run dev
+
+# 4. Start the frontend
+cd ../client
+npm install
+npm start
+```
+Make sure MongoDB is running locally or use MongoDB Atlas
+---
 ## 📥 Sample Sheet Format
 [DSA BI.xlsx](https://github.com/user-attachments/files/21089853/DSA.BI.xlsx)
 
