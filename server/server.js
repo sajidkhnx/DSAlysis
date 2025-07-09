@@ -7,13 +7,22 @@ require("dotenv").config();
 
 // Middleware
 app.use(cors({
-  origin: [
-    "https://dsalysis.vercel.app",
-    "https://ds-alysis-qgs4.vercel.app",
-    "https://ds-alysis.vercel.app",
-    "https://ds-alysis-yd1nyrj23-sajidkhnxdev07-gmailcoms-projects.vercel.app",
-    "https://ds-alysis-i4s49aspe-sajidkhnxdev07-gmailcoms-projects.vercel.app"
-  ],
+  origin: function (origin, callback) {
+    const allowedOrigins = [
+      "https://dsalysis.vercel.app",
+      "https://ds-alysis.vercel.app"
+    ];
+    // Allow all Vercel preview URLs (*.vercel.app)
+    if (
+      !origin ||
+      allowedOrigins.includes(origin) ||
+      /^https:\/\/ds-alysis-[a-z0-9-]+-sajidkhnxdev07-gmailcoms-projects\.vercel\.app$/.test(origin)
+    ) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true
 }));
 
