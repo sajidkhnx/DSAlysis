@@ -9,7 +9,8 @@ require("dotenv").config();
 app.use(cors({
   origin: [
     "https://dsalysis.vercel.app",
-    "https://ds-alysis-qgs4.vercel.app"
+    "https://ds-alysis-qgs4.vercel.app",
+    "https://ds-alysis.vercel.app"
   ],
   credentials: true
 }));
