@@ -11,7 +11,8 @@ app.use(cors({
     "https://dsalysis.vercel.app",
     "https://ds-alysis-qgs4.vercel.app",
     "https://ds-alysis.vercel.app",
-    "https://ds-alysis-yd1nyrj23-sajidkhnxdev07-gmailcoms-projects.vercel.app"
+    "https://ds-alysis-yd1nyrj23-sajidkhnxdev07-gmailcoms-projects.vercel.app",
+    "https://ds-alysis-i4s49aspe-sajidkhnxdev07-gmailcoms-projects.vercel.app"
   ],
   credentials: true
 }));
