@@ -10,7 +10,8 @@ app.use(cors({
   origin: [
     "https://dsalysis.vercel.app",
     "https://ds-alysis-qgs4.vercel.app",
-    "https://ds-alysis.vercel.app"
+    "https://ds-alysis.vercel.app",
+    "https://ds-alysis-yd1nyrj23-sajidkhnxdev07-gmailcoms-projects.vercel.app"
   ],
   credentials: true
 }));
