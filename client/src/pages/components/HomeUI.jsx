@@ -32,7 +32,7 @@ const HomeUI = () => {
         <h1 className="relative z-10 text-4xl md:text-6xl font-extrabold drop-shadow-xl tracking-tight bg-gradient-to-r from-blue-400 via-indigo-400 to-pink-400 bg-clip-text text-transparent animate-fade-in">Visualize. Track. Master DSA.</h1>
         <p className="relative z-10 mt-4 text-lg md:text-2xl text-blue-200 max-w-2xl mx-auto animate-fade-in delay-100">Upload your DSA sheet, track your coding progress, and crack the interview with data-driven insights.</p>
         <div className="relative z-10 mt-8 flex flex-wrap gap-4 justify-center animate-fade-in delay-200">
-          <Link to="/signup" className="bg-gradient-to-r from-blue-700 to-blue-400 text-white px-8 py-3 rounded-xl shadow-xl font-semibold text-lg hover:from-blue-800 hover:to-blue-500 border border-blue-500/30 transition-all duration-200 scale-100 hover:scale-105">Get Started</Link>
+          {/* <Link to="/signup" className="bg-gradient-to-r from-blue-700 to-blue-400 text-white px-8 py-3 rounded-xl shadow-xl font-semibold text-lg hover:from-blue-800 hover:to-blue-500 border border-blue-500/30 transition-all duration-200 scale-100 hover:scale-105">Get Started</Link> */}
           <Link to="/upload" className="border border-blue-400 text-blue-200 px-8 py-3 rounded-xl hover:bg-blue-900/30 hover:text-white transition-all duration-200 scale-100 hover:scale-105 font-semibold text-lg">Upload Sheet</Link>
         </div>
       </header>

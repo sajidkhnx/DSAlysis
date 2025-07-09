@@ -188,15 +188,15 @@ const bartGrades = {
                     nameKey="category"
                     cx="50%"
                     cy="50%"
-                    outerRadius={100}
-                    label={({ name, percent }) => `${name} (${(percent * 100).toFixed(0)}%)`}
+                    outerRadius={window.innerWidth < 640 ? 70 : 100}
+                    label={window.innerWidth < 640 ? false : ({ name, percent }) => `${name} (${(percent * 100).toFixed(0)}%)`}
                   >
                     {categoryData.map((entry, idx) => (
                       <Cell key={`cell-${idx}`} fill={pieColors[idx % pieColors.length]} />
                     ))}
                   </Pie>
                   <Tooltip />
-                  <Legend />
+                  <Legend wrapperStyle={{ fontSize: window.innerWidth < 640 ? '12px' : '16px', maxHeight: 120, overflowY: 'auto' }} />
                 </PieChart>
               </ResponsiveContainer>
             </div>
