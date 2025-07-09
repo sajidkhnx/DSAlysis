@@ -17,7 +17,7 @@ export default function DailyActivityHeatmap() {
       dateMap[day] = (dateMap[day] || 0) + 1;
     }
   });
- 
+
   const endDate = endOfToday();
   const startDate = subDays(endDate, 179);
   const values = [];
