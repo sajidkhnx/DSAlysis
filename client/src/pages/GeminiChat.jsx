@@ -26,7 +26,9 @@ export default function GeminiChat() {
     try {
       const response = await ai.models.generateContent({
         model: "gemini-2.5-flash",
-        contents: input,
+        contents: [
+          { role: "user", parts: [{ text: input }] }
+        ],
       });
       setMessages((msgs) => [
         ...msgs,
