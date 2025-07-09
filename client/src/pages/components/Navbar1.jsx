@@ -92,10 +92,9 @@ export default function Navbar1() {
               <span className="sr-only">View notifications</span>
               <BellIcon aria-hidden="true" className="size-6" />
             </button>
-
-            {/* Profile dropdown or Sign out */}
+            {/* Profile and Sign out only on desktop */}
             {isLoggedIn && (
-              <>
+              <div className="hidden sm:flex items-center">
                 <a
                   href="/profile"
                   className="ml-4 bg-gradient-to-br from-blue-900 to-indigo-900 text-blue-100 hover:text-white px-4 py-2 rounded-lg font-semibold shadow transition"
@@ -108,7 +107,7 @@ export default function Navbar1() {
                 >
                   Sign out
                 </button>
-              </>
+              </div>
             )}
           </div>
         </div>
@@ -117,20 +116,36 @@ export default function Navbar1() {
       <DisclosurePanel className="sm:hidden bg-gradient-to-r from-[#0a192f] via-[#312e81] to-[#2563eb] border-t border-blue-900/40">
         <div className="space-y-1 px-2 pb-3 pt-2">
           {isLoggedIn ? (
-            navigation.map((item) => (
+            <>
+              {navigation.map((item) => (
+                <DisclosureButton
+                  key={item.name}
+                  as="a"
+                  href={item.href}
+                  aria-current={location.pathname === item.href ? 'page' : undefined}
+                  className={classNames(
+                    location.pathname === item.href ? 'bg-blue-900/80 text-white shadow-lg' : 'text-blue-100 hover:bg-blue-800/60 hover:text-white',
+                    'block rounded-lg px-4 py-2 text-base font-semibold transition-all duration-150',
+                  )}
+                >
+                  {item.name}
+                </DisclosureButton>
+              ))}
               <DisclosureButton
-                key={item.name}
                 as="a"
-                href={item.href}
-                aria-current={location.pathname === item.href ? 'page' : undefined}
-                className={classNames(
-                  location.pathname === item.href ? 'bg-blue-900/80 text-white shadow-lg' : 'text-blue-100 hover:bg-blue-800/60 hover:text-white',
-                  'block rounded-lg px-4 py-2 text-base font-semibold transition-all duration-150',
-                )}
+                href="/profile"
+                className="block rounded-lg px-4 py-2 text-base font-semibold text-blue-100 hover:bg-blue-800/60 hover:text-white transition-all duration-150"
               >
-                {item.name}
+                Profile
               </DisclosureButton>
-            ))
+              <DisclosureButton
+                as="button"
+                onClick={handleLogout}
+                className="block rounded-lg px-4 py-2 text-base font-semibold text-white bg-gradient-to-br from-pink-600 to-blue-900 hover:bg-blue-800/60 transition-all duration-150 mt-1"
+              >
+                Sign out
+              </DisclosureButton>
+            </>
           ) : (
             <>
               <DisclosureButton
